@@ -1,0 +1,8 @@
+
+<div><input placeholder="Введите логин" [(ngModel)]="user.login"></div>
+<input placeholder="Введите пароль" [(ngModel)]="user.password" >
+<button (click)="Enter()">Войти</button>
+<br>
+<div *ngIf="user.login=='admin'&&user.password=='admin';else Logg">Вы вошли</div>
+<br>
+<ng-template #Logg>Введите данные</ng-template>
